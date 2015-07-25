@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-  </head>
-  <body>
-       <% if ( userFullName ) { %>
-        <h2>Hello <%=userFullName%> </h2> 
-        <a href="/signout">Sign out</a>
-      <% } else { %>
-        <a href="/signup">Signup</a>
-        <a href="/signin">Signin</a>
-    <% } %>
-    <br>
-    <img src="img/logo.jpg" alt="Logo">
-    <h1>this is a <%= title %></h1>
-  </body>
+<html xmlns:ng="http://angularjs.org">
+<head>
+  <title><%= title %></title>
+</head>
+<body><center style='margin-top:50px;'>
+  <% if (userFullName) { %>
+    <h2>Hello <%=userFullName%> </h2>
+    <a href="/signout">Sign out</a>
+  <% } else { %>
+   <h2> <a href="/signup">Signup</a>
+    <a href="/signin">Signin</a></h2>
+  <% } %></center>
+
+  <script type="text/javascript" src="/lib/angular/angular.js"></script>
+</body>
 </html>
