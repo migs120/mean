@@ -1,3 +1,4 @@
+/*
 exports.render = function(req, res) {
   
                                     if (req.session.lastVisit) {
@@ -12,8 +13,14 @@ exports.render = function(req, res) {
                                                           }
                                                )
                                     };
+ */
 
-
+exports.render = function(req, res) {
+  res.render('index', {
+    title: 'Hello World',
+    user: JSON.stringify(req.user)
+  });
+};
 
 /*  //setting1
 exports.render = function(req, res) {
