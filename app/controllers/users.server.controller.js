@@ -81,7 +81,7 @@ exports.signout = function(req, res) {
                                       };
 
 //===============================================crud routes==============================================================================
-
+/*
 exports.create = function(req, res, next) {
                                                 var user = new User(req.body);
 
@@ -135,7 +135,7 @@ exports.delete = function(req, res, next) {
                                                                           })
                                           };
 
-
+*/
 //======oAuth for facebook, twitter and google login ===========================
 
 exports.saveOAuthUserProfile = function(req, profile, done) {
