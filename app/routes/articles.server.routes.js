@@ -1,6 +1,9 @@
 var users = require('../../app/controllers/users.server.controller'),
     articles = require('../../app/controllers/articles.server.controller');
 
+console.log("Users:", Object.keys(users))
+console.log("Article:", Object.keys(articles))
+
 module.exports = function(app) {
                                   app.route('/api/articles')
                                      .get(articles.list)

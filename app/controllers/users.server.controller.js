@@ -36,7 +36,15 @@ exports.renderSignin = function(req, res, next) {
                                                           return res.redirect('/');
                                                         }
                                                 };
+exports.requiresLogin = function(req, res, next) {
+                                                    if (!req.isAuthenticated()) {
+                                                      return res.status(401).send({
+                                                        message: 'User is not logged in'
+                                                      });
+                                                    }
 
+                                                    next();
+                                                  };
 exports.renderSignup = function(req, res, next) {
                                                   if (!req.user) {
                                                                     res.render('signup', {
