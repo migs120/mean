@@ -12,11 +12,12 @@
 </style>
 </head>
 <body>
+  <center>
   <section ng-view></section>
-    
+    </center>
   <script type="text/javascript">
     window.user = <%- user || 'null' %>;
-    document.write(window.user);
+   
   </script>
   
   <script type="text/javascript" src="/socket.io/socket.io.js"></script>
@@ -43,4 +44,3 @@
   <script type="text/javascript" src="/application.js"></script>
 </body>
 </html>
-As you can
