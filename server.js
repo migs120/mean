@@ -7,13 +7,10 @@ var mongoose = require('./config/mongoose'),
 
 
 var db = mongoose();
-var app = express();
+var app = express(db);
 var passport = passport();
 
-app.use('/', function(req, res) {
-                                  res.send('Hello World');
-                                }
-       );
+
 
 app.listen(3000, '0.0.0.0');
 console.log('Server running at http://0.0.0.0:3000/');
@@ -21,7 +18,12 @@ console.log('Server running at http://0.0.0.0:3000/');
 module.exports = app;
 //*/
 
-
+/*
+app.use('/', function(req, res) {
+                                  res.send('Hello World');
+                                }
+       );
+*/
 
 
 
